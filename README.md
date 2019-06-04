@@ -1,2 +1,2 @@
 # lcol
-Liquid collector projects, arduino and etc
+Liquid collector projects, linux preferences and scripts and etc
