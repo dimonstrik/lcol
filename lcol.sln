@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "site", "site\site.csproj", "{F62CDF97-A289-4E7F-B4E1-234C0DAF8AC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCollector", "site\LCollector.csproj", "{F62CDF97-A289-4E7F-B4E1-234C0DAF8AC0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8A402FD2-7555-46BB-B55F-A2FD515B9D41}"
 	ProjectSection(SolutionItems) = preProject

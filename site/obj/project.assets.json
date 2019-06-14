@@ -12078,9 +12078,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/latokhin/Desktop/Projects/dimonstrik/lcol/lcol/site/site.csproj",
-      "projectName": "site",
-      "projectPath": "/Users/latokhin/Desktop/Projects/dimonstrik/lcol/lcol/site/site.csproj",
+      "projectUniqueName": "/Users/latokhin/Desktop/Projects/dimonstrik/lcol/lcol/site/LCollector.csproj",
+      "projectName": "LCollector",
+      "projectPath": "/Users/latokhin/Desktop/Projects/dimonstrik/lcol/lcol/site/LCollector.csproj",
       "packagesPath": "/Users/latokhin/.nuget/packages/",
       "outputPath": "/Users/latokhin/Desktop/Projects/dimonstrik/lcol/lcol/site/obj/",
       "projectStyle": "PackageReference",

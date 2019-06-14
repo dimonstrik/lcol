@@ -3,7 +3,7 @@ Liquid collector projects, linux preferences and scripts and etc
 
 ```console
 docker build --pull -t site .
-docker run --name lcol_site --rm -it -p 80:80 site
+docker run --name lcol_site --rm -it -p 8080:8080 site
 ```
 
 # Use ASP.NET Core on Linux ARM32 with Docker
