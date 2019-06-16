@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Lcol.Models.RawData>
+
+@{
+   ViewData ["Title"] = "Monitoring";
+}
+
+<h2>Last requests</h2>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Timestamp</td>
+        <td>Data</td>
+    </tr>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.AddDateTime</td>
+        <td width="500">@item.Data</td>
+    </tr>
+}
+</table>

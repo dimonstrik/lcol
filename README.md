@@ -1,9 +1,24 @@
 ﻿# lcol
 Liquid collector projects, linux preferences and scripts and etc
 
+#Deploy project
+
+## General building and publishing apps via docker composer, its described into docker-compose.yml
+``console
+docker-compose up -d --build
+docker-compose down
+```
+
+## To build and run only web asp.net app
 ```console
 docker build --pull -t site .
 docker run --name lcol_site --rm -it -p 8080:80 site
+```
+
+## To build and run only MySQL
+* Change 'db' to 'localhost' at appsettings.json - "MySqlConnection": "server=localhost;
+```console
+docker-compose -f mysql_only.yml run --service-ports db
 ```
 
 # Use ASP.NET Core on Linux ARM32 with Docker

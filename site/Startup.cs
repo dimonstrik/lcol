@@ -4,8 +4,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Lcol.Models;
+using MySql.Data.EntityFrameworkCore;
 
-namespace site
+namespace Lcol
 {
     public class Startup
     {
@@ -26,7 +29,11 @@ namespace site
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddDbContext<MySQLContext>(options =>
+            {
+                options.UseMySQL(Configuration.GetConnectionString("MySqlConnection"));
+            });
+        
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
