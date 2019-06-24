@@ -1,15 +1,18 @@
 ﻿# lcol
 Liquid collector projects, linux preferences and scripts and etc
 
-#Deploy project
+# Deploy project
 
-## General building and publishing apps via docker composer, its described into docker-compose.yml
-``console
+## General building and publishing 
+
+You have to do it for app via docker composer. It's described into docker-compose.yml
+```console
 docker-compose up -d --build
 docker-compose down
 ```
 
 ## To build and run only web asp.net app
+
 ```console
 docker build --pull -t site .
 docker run --name lcol_site --rm -it -p 8080:80 site
