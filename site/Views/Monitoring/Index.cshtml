@@ -1,23 +1,30 @@
 ﻿@model IEnumerable<Lcol.Models.RawData>
 
 @{
-   ViewData ["Title"] = "Monitoring";
+    ViewData ["Title"] = "Monitoring";
+    var topItemsCount = 10;
 }
 
-<h2>Last requests</h2>
+<h2>Last @topItemsCount requests</h2>
 
-<table>
-    <tr>
-        <td>Id</td>
-        <td>Timestamp</td>
-        <td>Data</td>
-    </tr>
-@foreach (var item in Model)
-{
-    <tr>
-        <td>@item.Id</td>
-        <td>@item.AddDateTime</td>
-        <td width="500">@item.Data</td>
-    </tr>
-}
-</table>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Timestamp</th>
+                <th>Data hash</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderByDescending(x => x.AddDateTime).Take(topItemsCount))
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.AddDateTime</td>
+                    <td>@item.GetBlobMd5()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
