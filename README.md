@@ -1,11 +1,11 @@
 ﻿# lcol
 Liquid collector projects, linux preferences and scripts and etc
 
-# Deploy project
+# Deployment of the project
 
 ## General building and publishing 
 
-You have to do it for app via docker composer. It's described into docker-compose.yml
+You have to do it for the app via docker composer. It's described into docker-compose.yml
 ```console
 docker-compose up -d --build
 docker-compose down
@@ -19,7 +19,9 @@ docker run --name lcol_site --rm -it -p 8080:80 site
 ```
 
 ## To build and run only MySQL
+
 * Change 'db' to 'localhost' at appsettings.json - "MySqlConnection": "server=localhost;
+
 ```console
 docker-compose -f mysql_only.yml run --service-ports db
 ```
