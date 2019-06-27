@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 		Directory.Build.props = Directory.Build.props
-		Dockerfile = Dockerfile
-		.dockerignore = .dockerignore
 		docker-compose.yml = docker-compose.yml
 		mysql_only.yml = mysql_only.yml
 	EndProjectSection
@@ -17,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_MySQL_Init_Script", "_MySQ
 	ProjectSection(SolutionItems) = preProject
 		init.sql = init.sql
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "postprocessor", "postprocessor\postprocessor.csproj", "{0E4B63A7-7A43-4D39-B7AF-03970BD66E2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +28,10 @@ Global
 		{F62CDF97-A289-4E7F-B4E1-234C0DAF8AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F62CDF97-A289-4E7F-B4E1-234C0DAF8AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F62CDF97-A289-4E7F-B4E1-234C0DAF8AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E4B63A7-7A43-4D39-B7AF-03970BD66E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4B63A7-7A43-4D39-B7AF-03970BD66E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4B63A7-7A43-4D39-B7AF-03970BD66E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4B63A7-7A43-4D39-B7AF-03970BD66E2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A3873562-10B6-4CC6-8887-D5223E03986A} = {8A402FD2-7555-46BB-B55F-A2FD515B9D41}

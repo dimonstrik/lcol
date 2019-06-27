@@ -14,8 +14,16 @@ docker-compose down
 ## To build and run only web asp.net app
 
 ```console
+cd ./site/
 docker build --pull -t site .
 docker run --name lcol_site --rm -it -p 8080:80 site
+```
+
+## To build and run only db data postprocessor .net appw
+```console
+cd ./postprocessor/
+docker build --pull -t postprocessor .
+docker run --name lcol_postprocessor --rm -it postprocessor
 ```
 
 ## To build and run only MySQL
