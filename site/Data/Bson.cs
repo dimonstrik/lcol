@@ -5,7 +5,7 @@ using Newtonsoft.Json.Bson;
 
 namespace Lcol.Models
 {
-    public abstract class BsonData
+    public abstract class Bson
     {
         public static byte[] ToBson<T>(T value)
         {

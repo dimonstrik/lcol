@@ -1,14 +1,10 @@
 ﻿FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
-# copy csproj and restore as distinct layers
-COPY *.csproj ./src/
-WORKDIR ./src
-RUN dotnet restore
-
-# copy everything else and build app
-COPY . ./src/
+# copy everything, restore and build app
+COPY /. ./src/
 WORKDIR /app/src
+RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime

@@ -20,5 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Monitoring\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>
