@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using Lcol.Models;
 
 namespace Lcol
@@ -8,11 +9,6 @@ namespace Lcol
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Press Enter");
-            Console.ReadLine();
-            Console.WriteLine("Press Enter");
-            Console.ReadLine();
-
             using (var db = new MySQLContext())
             {
 
@@ -24,8 +20,6 @@ namespace Lcol
 
                 }
             }
-
-            Console.ReadLine();
         }
     }
 }

@@ -6,6 +6,7 @@ Liquid collector projects, linux preferences and scripts and etc
 ## General building and publishing 
 
 You have to do it for the app via docker composer. It's described into docker-compose.yml
+You can also run locally projects with upped mysql db, it has mapped ports to localhost.
 ```console
 docker-compose up -d --build
 docker-compose down
@@ -27,12 +28,28 @@ docker run --name lcol_postprocessor --rm -it postprocessor
 ```
 
 ## To build and run only MySQL
-
-* Change 'db' to 'localhost' at appsettings.json - "MySqlConnection": "server=localhost;
-
 ```console
 docker-compose -f mysql_only.yml run --service-ports db
 ```
+
+## Usefull docker commands
+```console
+docker ps
+docker images
+docker logs lcol_site_1
+docker logs lcol_postprocessor_1
+docker exec -it lcol_site_1 /bin/bash
+docker exec -it lcol_postprocessor_1 /bin/bash
+docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
+```
+## Usefull docker programms to install into container
+```console
+apt-get update
+apt-get install dnsutils -y
+apt-get install net-tools -y
+apt-get install iputils-ping -y
+```
+
 
 # Use ASP.NET Core on Linux ARM32 with Docker
 

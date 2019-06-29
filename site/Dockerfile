@@ -3,6 +3,7 @@ WORKDIR /app
 
 # copy everything, restore and build app
 COPY /. ./src/
+COPY /appsettings.docker.json ./src/appsettings.json
 WORKDIR /app/src
 RUN dotnet restore
 RUN dotnet publish -c Release -o out
