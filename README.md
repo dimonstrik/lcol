@@ -20,7 +20,7 @@ docker build --pull -t site .
 docker run --name lcol_site --rm -it -p 8080:80 site
 ```
 
-## To build and run only db data postprocessor .net appw
+## To build and run only db data postprocessor .net app
 ```console
 cd ./postprocessor/
 docker build --pull -t postprocessor .
