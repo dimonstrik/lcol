@@ -8,6 +8,14 @@ namespace Lcol.Models
     public class MySQLContext : DbContext
     {
         public IConfiguration Configuration { get; }
+        public DbSet<RawData> RawDatas { get; set; }
+
+        public DbSet<Building> Buildings { get; set; }
+        public DbSet<Apartment> Apartments { get; set; }
+        public DbSet<Owner> Owners { get; set; }
+
+        public DbSet<Device> Devices { get; set; }
+        public DbSet<Indication> Indications { get; set; }
 
         public MySQLContext()
         {
@@ -19,16 +27,14 @@ namespace Lcol.Models
             this.Database.EnsureCreated();
         }
 
+        public MySQLContext(DbContextOptions options) : base(options)
+        {
+            this.Database.EnsureCreated();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(Configuration.GetConnectionString("MySqlConnection"));
         }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
-
-        public DbSet<RawData> RawDatas { get; set; }
     }
 }

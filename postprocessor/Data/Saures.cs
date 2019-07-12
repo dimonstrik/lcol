@@ -2,7 +2,7 @@
 
 namespace Lcol.Data
 {
-    public abstract class BaseJson
+    public class BaseJson
     {
         public virtual string Type { get; }
     }

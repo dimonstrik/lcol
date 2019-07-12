@@ -40,6 +40,7 @@ docker logs lcol_site_1
 docker logs lcol_postprocessor_1
 docker exec -it lcol_site_1 /bin/bash
 docker exec -it lcol_postprocessor_1 /bin/bash
+docker exec -it lcol_db_run_509e60e0d455 /bin/bash
 docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
 ```
 ## Usefull docker programms to install into container
