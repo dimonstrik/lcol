@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "LiquidCollector",
+            "includePath": [
+                "${workspaceFolder}/inc",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "${default}",
+            "cStandard": "c99",
+            "compilerPath": ""
+        }
+    ],
+    "version": 4
+}
