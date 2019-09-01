@@ -66,6 +66,8 @@ libm0.sm8
 
 # Interrupt vectors file - section reserved for STVD
 #<BEGIN VECTOR_FILE>
++seg .const -b 0x8000 -k
+Debug\stm8_interrupt_vector.o
 #<END VECTOR_FILE>
 
 # Defines - section reserved for STVD

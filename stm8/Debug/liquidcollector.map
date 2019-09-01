@@ -1,5 +1,5 @@
 
-Map of Debug\liquidcollector.sm8 from link file Debug\liquidcollector.lkf - Fri Aug 23 12:57:09 2019
+Map of Debug\liquidcollector.sm8 from link file Debug\liquidcollector.lkf - Sun Sep  1 22:36:51 2019
 
 
                                --------
@@ -7,7 +7,7 @@ Map of Debug\liquidcollector.sm8 from link file Debug\liquidcollector.lkf - Fri 
                                --------
 
 start 00008080 end 00008085 length     5 segment .const
-start 00008088 end 00008735 length  1709 segment .text
+start 00008088 end 00008736 length  1710 segment .text
 start 00001000 end 00001000 length     0 segment .eeprom
 start 00000000 end 00000000 length     0 segment .bsct
 start 00000000 end 0000000a length    10 segment .ubsct
@@ -15,8 +15,9 @@ start 0000000a end 0000000a length     0 segment .bit
 start 0000000a end 0000000a length     0 segment .share
 start 00000100 end 00000100 length     0 segment .data
 start 00000100 end 00000100 length     0 segment .bss
-start 00000000 end 000003d8 length   984 segment .info.
-start 00000000 end 000026fb length  9979 segment .debug
+start 00000000 end 00000454 length  1108 segment .info.
+start 00000000 end 00002866 length 10342 segment .debug
+start 00008000 end 00008080 length   128 segment .const
 start 00008085 end 00008088 length     3 segment .init
 
 
@@ -87,6 +88,12 @@ start 0000033d end 0000036c length    47 section .info.
 start 00000007 end 0000000a length     3 section .ubsct
 start 0000036c end 0000039b length    47 section .info.
 
+Debug\stm8_interrupt_vector.o:
+start 00008735 end 00008736 length     1 section .text
+start 000026fb end 00002866 length   363 section .debug
+start 0000039b end 00000417 length   124 section .info.
+start 00008000 end 00008080 length   128 section .const
+
 
                              -----------
                              Stack usage
@@ -98,6 +105,9 @@ _delay_ms                                 9   (4)
 
 Debug\main.o:
 _main                                >   11   (2)
+
+Debug\stm8_interrupt_vector.o:
+f_NonHandledInterrupt                >    6   (6)
 
 Debug\stm8l15x_clk.o:
 _CLK_AdjustHSICalibrationValue       >    2   (2)
@@ -141,7 +151,7 @@ _GPIO_ToggleBits                          5   (5)
 _GPIO_Write                          >    5   (5)
 _GPIO_WriteBit                       >    6   (6)
 
-Stack size: 25
+Stack size: 31
 
 
                               ---------
@@ -215,26 +225,30 @@ Stack size: 25
 
   34 > _GPIO_WriteBit: (6)
 
-  35 > _delay_10us: (4)
-  36      + _CLK_PeripheralClockConfig: (5)
+  35 > __stext: (0)
+
+  36 > _delay_10us: (4)
+  37      + _CLK_PeripheralClockConfig: (5)
        
-  37 > _main: (2)
-  38      + _GPIO_DeInit: (2)
-  39      + _GPIO_Init: (6)
-  40      + _GPIO_ToggleBits: (5)
-  41      + _delay_ms: (4)
-  42      |    + _CLK_PeripheralClockConfig --> 36
+  38 > _main: (2)
+  39      + _GPIO_DeInit: (2)
+  40      + _GPIO_Init: (6)
+  41      + _GPIO_ToggleBits: (5)
+  42      + _delay_ms: (4)
+  43      |    + _CLK_PeripheralClockConfig --> 37
           | 
        
-  43   _CLK_PeripheralClockConfig --> 36
+  44 > f_NonHandledInterrupt: (6)
 
-  44   _GPIO_DeInit --> 38
+  45   _CLK_PeripheralClockConfig --> 37
 
-  45   _GPIO_Init --> 39
+  46   _GPIO_DeInit --> 39
 
-  46   _GPIO_ToggleBits --> 40
+  47   _GPIO_Init --> 40
 
-  47   _delay_ms --> 41
+  48   _GPIO_ToggleBits --> 41
+
+  49   _delay_ms --> 42
 
 
 
@@ -298,7 +312,8 @@ __stack                               000007ff   defined in command file
 __startmem                            00000100   defined in command file section .bss
                                                  *** not used ***
 __stext                               00008088   defined in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8 section .text
-                                                 *** not used ***
+                                                 used in Debug\stm8_interrupt_vector.o
+__vectab                              00008000   defined in Debug\stm8_interrupt_vector.o section .const
 _delay_10us                           000085a7   defined in Debug\delay.o section .text
 _delay_ms                             0000856a   defined in Debug\delay.o section .text
                                                  used in Debug\main.o
@@ -330,3 +345,4 @@ c_x                                   00000004   defined in (C:\Program Files (x
                                                          (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ldiv.o
 c_y                                   00000007   defined in (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)yreg.o section .ubsct
                                                  used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8
+f_NonHandledInterrupt                 00008735   defined in Debug\stm8_interrupt_vector.o section .text
