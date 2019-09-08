@@ -26,6 +26,7 @@
 #include "stm8l15x.h"
 //#include "icc_measure.h"
 #include "delay.h"
+#include "stm8l_discovery_lcd.h"
 
 /* Uncomment the line below to enable peripheral header file inclusion */
 /* #include "stm8l15x_adc.h" */

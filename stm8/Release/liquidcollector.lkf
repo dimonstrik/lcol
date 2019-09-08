@@ -50,7 +50,8 @@ crtsi0.sm8
 
 # Object files list - section reserved for STVD
 #<BEGIN OBJECT_FILES>
-Release\main.o
+Release\main_blinker.o
+Release\stm8l_discovery_lcd.o
 Release\stm8l15x_gpio.o
 Release\stm8l15x_clk.o
 Release\delay.o
@@ -66,6 +67,8 @@ libm0.sm8
 
 # Interrupt vectors file - section reserved for STVD
 #<BEGIN VECTOR_FILE>
++seg .const -b 0x8000 -k
+Release\stm8_interrupt_vector.o
 #<END VECTOR_FILE>
 
 # Defines - section reserved for STVD

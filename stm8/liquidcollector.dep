@@ -4,23 +4,32 @@
 Keyword=ST7Project
 Number=1.3
 
+[Root.Source Files.main_helloworld.c.Config.0]
+ExternDep= main_helloworld.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x.h stm8l15x_conf.h inc\delay.h inc\stm8l_discovery_lcd.h  inc\discover_board.h inc\stm8l15x_gpio.h inc\stm8l15x_clk.h  inc\stm8l15x_lcd.h
+
+[Root.Source Files.main_blinker.c.Config.0]
+ExternDep= main_blinker.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x.h stm8l15x_conf.h inc\delay.h inc\stm8l_discovery_lcd.h  inc\discover_board.h inc\stm8l15x_gpio.h inc\stm8l15x_clk.h  inc\stm8l15x_lcd.h
+
 [Root.Source Files.main.c.Config.0]
 ExternDep= main.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x.h stm8l15x_conf.h inc\delay.h inc\stm8l15x_clk.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
 
 [Root.Source Files.main.c.Config.1]
 ExternDep= main.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x.h stm8l15x_conf.h inc\delay.h inc\stm8l15x_clk.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
 
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.0]
-ExternDep= src\stm8l15x_wwdg.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_wwdg.h inc\stm8l15x.h stm8l15x_conf.h inc\stm8l15x_clk.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
-
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.1]
-ExternDep= src\stm8l15x_wwdg.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_wwdg.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
+[Root.Source Files.src\stm8l_discovery_lcd.c.Config.0]
+ExternDep= src\stm8l_discovery_lcd.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l_discovery_lcd.h inc\discover_board.h inc\stm8l15x_gpio.h  inc\stm8l15x.h stm8l15x_conf.h inc\delay.h inc\stm8l15x_clk.h  inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\stm8l15x_wfe.c.Config.0]
 ExternDep= src\stm8l15x_wfe.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_wfe.h inc\stm8l15x.h stm8l15x_conf.h inc\stm8l15x_clk.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\stm8l15x_wfe.c.Config.1]
 ExternDep= src\stm8l15x_wfe.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_wfe.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.0]
+ExternDep= src\stm8l15x_wwdg.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_wwdg.h inc\stm8l15x.h stm8l15x_conf.h inc\stm8l15x_clk.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.1]
+ExternDep= src\stm8l15x_wwdg.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_wwdg.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\stm8l15x_usart.c.Config.0]
 ExternDep= src\stm8l15x_usart.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_usart.h inc\stm8l15x.h stm8l15x_conf.h inc\stm8l15x_clk.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
@@ -89,7 +98,7 @@ ExternDep= src\stm8l15x_pwr.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXST
 ExternDep= src\stm8l15x_pwr.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_pwr.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\stm8l15x_lcd.c.Config.0]
-ExternDep= src\stm8l15x_lcd.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_lcd.h inc\stm8l15x.h stm8l15x_conf.h inc\stm8l15x_clk.h  inc\stm8l15x_gpio.h
+ExternDep= src\stm8l15x_lcd.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_lcd.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l_discovery_lcd.h inc\discover_board.h inc\stm8l15x_gpio.h  inc\stm8l15x_clk.h
 
 [Root.Source Files.src\stm8l15x_lcd.c.Config.1]
 ExternDep= src\stm8l15x_lcd.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_lcd.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_gpio.h
@@ -119,7 +128,7 @@ ExternDep= src\stm8l15x_i2c.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXST
 ExternDep= src\stm8l15x_i2c.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_i2c.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\stm8l15x_gpio.c.Config.0]
-ExternDep= src\stm8l15x_gpio.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_gpio.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_lcd.h
+ExternDep= src\stm8l15x_gpio.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_gpio.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l_discovery_lcd.h inc\discover_board.h inc\stm8l15x_clk.h  inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\stm8l15x_gpio.c.Config.1]
 ExternDep= src\stm8l15x_gpio.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_gpio.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_lcd.h
@@ -155,7 +164,7 @@ ExternDep= src\stm8l15x_comp.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXS
 ExternDep= src\stm8l15x_comp.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_comp.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\stm8l15x_clk.c.Config.0]
-ExternDep= src\stm8l15x_clk.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_clk.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
+ExternDep= src\stm8l15x_clk.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_clk.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l_discovery_lcd.h inc\discover_board.h inc\stm8l15x_gpio.h  inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\stm8l15x_clk.c.Config.1]
 ExternDep= src\stm8l15x_clk.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_clk.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
@@ -179,7 +188,7 @@ ExternDep= src\stm8l15x_adc.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXST
 ExternDep= src\stm8l15x_adc.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_adc.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_clk.h inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\delay.c.Config.0]
-ExternDep= src\delay.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_clk.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h
+ExternDep= src\delay.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_clk.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l_discovery_lcd.h inc\discover_board.h inc\stm8l15x_gpio.h  inc\stm8l15x_lcd.h
 
 [Root.Source Files.src\delay.c.Config.1]
 ExternDep= src\delay.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\HSTM8\mods0.h"  inc\stm8l15x_clk.h inc\stm8l15x.h stm8l15x_conf.h inc\delay.h  inc\stm8l15x_gpio.h inc\stm8l15x_lcd.h

@@ -1,0 +1,10 @@
+# directories
+*/Debug/*
+*/Release/*
+liquidcollector_Programmer/
+.Idea_Groups/
+.Idea_Temp/
+
+
+# files
+*.o

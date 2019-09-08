@@ -216,7 +216,7 @@ String.6.0=2019,8,23,0,50,12
 [Root.Source Files]
 ElemType=Folder
 PathName=Source Files
-Child=Root.Source Files.main.c
+Child=Root.Source Files.main_helloworld.c
 Next=Root.Include Files
 Config.0=Root.Source Files.Config.0
 Config.1=Root.Source Files.Config.1
@@ -287,42 +287,37 @@ String.4.0=
 String.5.0=
 String.6.0=2019,8,23,0,50,12
 
-[Root.Source Files.main.c]
+[Root.Source Files.main_helloworld.c]
 ElemType=File
-PathName=main.c
-Next=Root.Source Files.src\stm8l15x_wwdg.c
+PathName=main_helloworld.c
+Next=Root.Source Files.main_blinker.c
+Config.0=Root.Source Files.main_helloworld.c.Config.0
+Config.1=Root.Source Files.main_helloworld.c.Config.1
 
-[Root.Source Files.src\stm8l15x_wwdg.c]
-ElemType=File
-PathName=src\stm8l15x_wwdg.c
-Next=Root.Source Files.src\stm8l15x_wfe.c
-Config.0=Root.Source Files.src\stm8l15x_wwdg.c.Config.0
-Config.1=Root.Source Files.src\stm8l15x_wwdg.c.Config.1
+[Root.Source Files.main_helloworld.c.Config.0]
+Settings.0.0=Root.Source Files.main_helloworld.c.Config.0.Settings.0
+Settings.0.1=Root.Source Files.main_helloworld.c.Config.0.Settings.1
+Settings.0.2=Root.Source Files.main_helloworld.c.Config.0.Settings.2
 
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.0]
-Settings.0.0=Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.0
-Settings.0.1=Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.1
-Settings.0.2=Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.2
+[Root.Source Files.main_helloworld.c.Config.1]
+Settings.1.0=Root.Source Files.main_helloworld.c.Config.1.Settings.0
+Settings.1.1=Root.Source Files.main_helloworld.c.Config.1.Settings.1
+Settings.1.2=Root.Source Files.main_helloworld.c.Config.1.Settings.2
 
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.1]
-Settings.1.0=Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.0
-Settings.1.1=Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.1
-Settings.1.2=Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.2
-
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.0]
-String.6.0=2019,8,23,0,59,57
+[Root.Source Files.main_helloworld.c.Config.0.Settings.0]
+String.6.0=2019,9,8,18,44,39
 String.8.0=Debug
 Int.0=1
 Int.1=0
 
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.1]
+[Root.Source Files.main_helloworld.c.Config.0.Settings.1]
 String.2.0=Performing Custom Build on $(InputFile)
 String.3.0=
 String.4.0=
 String.5.0=
 String.6.0=2019,8,23,0,50,12
 
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.2]
+[Root.Source Files.main_helloworld.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
 String.3.0=cxstm8 -iinc  -customDbg -customDebCompat -customOpt-no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
@@ -330,20 +325,20 @@ String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2019,8,23,0,50,12
 String.8.0=Debug
 
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.0]
-String.6.0=2019,8,23,12,49,48
+[Root.Source Files.main_helloworld.c.Config.1.Settings.0]
+String.6.0=2019,9,8,18,21,10
 String.8.0=Release
-Int.0=1
+Int.0=0
 Int.1=0
 
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.1]
+[Root.Source Files.main_helloworld.c.Config.1.Settings.1]
 String.2.0=Performing Custom Build on $(InputFile)
 String.3.0=
 String.4.0=
 String.5.0=
 String.6.0=2019,8,23,0,50,12
 
-[Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.2]
+[Root.Source Files.main_helloworld.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
 String.3.0=cxstm8 -iinc  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
@@ -351,10 +346,79 @@ String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2019,8,23,0,50,12
 String.8.0=Release
 
+[Root.Source Files.main_blinker.c]
+ElemType=File
+PathName=main_blinker.c
+Next=Root.Source Files.main.c
+
+[Root.Source Files.main.c]
+ElemType=File
+PathName=main.c
+Next=Root.Source Files.src\stm8l_discovery_lcd.c
+Config.0=Root.Source Files.main.c.Config.0
+Config.1=Root.Source Files.main.c.Config.1
+
+[Root.Source Files.main.c.Config.0]
+Settings.0.0=Root.Source Files.main.c.Config.0.Settings.0
+Settings.0.1=Root.Source Files.main.c.Config.0.Settings.1
+Settings.0.2=Root.Source Files.main.c.Config.0.Settings.2
+
+[Root.Source Files.main.c.Config.1]
+Settings.1.0=Root.Source Files.main.c.Config.1.Settings.0
+Settings.1.1=Root.Source Files.main.c.Config.1.Settings.1
+Settings.1.2=Root.Source Files.main.c.Config.1.Settings.2
+
+[Root.Source Files.main.c.Config.0.Settings.0]
+String.6.0=2019,9,8,17,48,16
+String.8.0=Debug
+Int.0=1
+Int.1=0
+
+[Root.Source Files.main.c.Config.0.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,8,23,0,50,12
+
+[Root.Source Files.main.c.Config.0.Settings.2]
+String.2.0=Compiling $(InputFile)...
+String.3.0=cxstm8 -iinc  -customDbg -customDebCompat -customOpt-no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
+String.5.0=$(IntermPath)$(InputName).ls
+String.6.0=2019,8,23,0,50,12
+String.8.0=Debug
+
+[Root.Source Files.main.c.Config.1.Settings.0]
+String.6.0=2019,9,8,17,46,16
+String.8.0=Release
+Int.0=0
+Int.1=0
+
+[Root.Source Files.main.c.Config.1.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,8,23,0,50,12
+
+[Root.Source Files.main.c.Config.1.Settings.2]
+String.2.0=Compiling $(InputFile)...
+String.3.0=cxstm8 -iinc  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
+String.5.0=$(IntermPath)$(InputName).ls
+String.6.0=2019,8,23,0,50,12
+String.8.0=Release
+
+[Root.Source Files.src\stm8l_discovery_lcd.c]
+ElemType=File
+PathName=src\stm8l_discovery_lcd.c
+Next=Root.Source Files.src\stm8l15x_wfe.c
+
 [Root.Source Files.src\stm8l15x_wfe.c]
 ElemType=File
 PathName=src\stm8l15x_wfe.c
-Next=Root.Source Files.src\stm8l15x_usart.c
+Next=Root.Source Files.src\stm8l15x_wwdg.c
 Config.0=Root.Source Files.src\stm8l15x_wfe.c.Config.0
 Config.1=Root.Source Files.src\stm8l15x_wfe.c.Config.1
 
@@ -403,6 +467,65 @@ String.5.0=
 String.6.0=2019,8,23,0,50,12
 
 [Root.Source Files.src\stm8l15x_wfe.c.Config.1.Settings.2]
+String.2.0=Compiling $(InputFile)...
+String.3.0=cxstm8 -iinc  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
+String.5.0=$(IntermPath)$(InputName).ls
+String.6.0=2019,8,23,0,50,12
+String.8.0=Release
+
+[Root.Source Files.src\stm8l15x_wwdg.c]
+ElemType=File
+PathName=src\stm8l15x_wwdg.c
+Next=Root.Source Files.src\stm8l15x_usart.c
+Config.0=Root.Source Files.src\stm8l15x_wwdg.c.Config.0
+Config.1=Root.Source Files.src\stm8l15x_wwdg.c.Config.1
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.0]
+Settings.0.0=Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.0
+Settings.0.1=Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.1
+Settings.0.2=Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.2
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.1]
+Settings.1.0=Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.0
+Settings.1.1=Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.1
+Settings.1.2=Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.2
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.0]
+String.6.0=2019,8,23,0,59,57
+String.8.0=Debug
+Int.0=1
+Int.1=0
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,8,23,0,50,12
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.0.Settings.2]
+String.2.0=Compiling $(InputFile)...
+String.3.0=cxstm8 -iinc  -customDbg -customDebCompat -customOpt-no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
+String.5.0=$(IntermPath)$(InputName).ls
+String.6.0=2019,8,23,0,50,12
+String.8.0=Debug
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.0]
+String.6.0=2019,8,23,12,49,48
+String.8.0=Release
+Int.0=1
+Int.1=0
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,8,23,0,50,12
+
+[Root.Source Files.src\stm8l15x_wwdg.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
 String.3.0=cxstm8 -iinc  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
@@ -1077,9 +1200,9 @@ Settings.1.1=Root.Source Files.src\stm8l15x_lcd.c.Config.1.Settings.1
 Settings.1.2=Root.Source Files.src\stm8l15x_lcd.c.Config.1.Settings.2
 
 [Root.Source Files.src\stm8l15x_lcd.c.Config.0.Settings.0]
-String.6.0=2019,8,23,0,59,21
+String.6.0=2019,9,8,18,38,58
 String.8.0=Debug
-Int.0=1
+Int.0=0
 Int.1=0
 
 [Root.Source Files.src\stm8l15x_lcd.c.Config.0.Settings.1]
@@ -1926,6 +2049,16 @@ Next=Root.Include Files.stm8l15x_conf.h
 [Root.Include Files.stm8l15x_conf.h]
 ElemType=File
 PathName=stm8l15x_conf.h
+Next=Root.Include Files.inc\discover_board.h
+
+[Root.Include Files.inc\discover_board.h]
+ElemType=File
+PathName=inc\discover_board.h
+Next=Root.Include Files.inc\stm8l_discovery_lcd.h
+
+[Root.Include Files.inc\stm8l_discovery_lcd.h]
+ElemType=File
+PathName=inc\stm8l_discovery_lcd.h
 Next=Root.Include Files.inc\stm8l15x_wwdg.h
 
 [Root.Include Files.inc\stm8l15x_wwdg.h]
